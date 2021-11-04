@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
   return (
-    <Provider>
-      <BrowserRouter store={ store }>
+    <Provider store={ store }>
+      <BrowserRouter>
         <Routes />
       </BrowserRouter>
     </Provider>

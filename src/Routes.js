@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Login from './pages/Login';
+import TaskScreen from './pages/TaskScreen';
 
 export default function Routes() {
   return (
@@ -8,7 +8,7 @@ export default function Routes() {
       <Route
         exact
         path="/"
-        component={ Login }
+        component={ TaskScreen }
       />
       <Redirect
         to="/not-found"
