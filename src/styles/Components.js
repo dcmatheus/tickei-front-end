@@ -1,24 +1,29 @@
 import tw from 'tailwind-styled-components';
 
 export const StyledHeader = tw.header`
-  bg-blue-400
-  h-16
   flex
   justify-between
   p-2
+  ${({ mobileScreen }) => (mobileScreen ? 'px-2' : 'px-5')}
 `;
 
 export const UserButton = tw.button`
   rounded-full
-  bg-gray-100
-  w-12
-  h-full
+  bg-gray-400
+  text-2xl
   p-1
 `;
 
 export const LogoContainer = tw.h1`
   flex
   content-center
-  text-5xl
+  text-gray-400
+  ${({ mobileScreen }) => (mobileScreen ? 'text-3xl' : 'text-7xl')}
+  justify-self-center
   font-bold
+`;
+
+export const MenuButton = tw.button`
+  text-gray-400
+  ${({ mobileScreen }) => (mobileScreen ? 'text-3xl' : 'text-6xl')}
 `;
