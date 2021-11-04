@@ -7,13 +7,6 @@ export const StyledHeader = tw.header`
   ${({ mobileScreen }) => (mobileScreen ? 'px-2' : 'px-5')}
 `;
 
-export const UserButton = tw.button`
-  rounded-full
-  bg-gray-400
-  text-2xl
-  p-1
-`;
-
 export const LogoContainer = tw.h1`
   flex
   content-center
@@ -21,9 +14,4 @@ export const LogoContainer = tw.h1`
   ${({ mobileScreen }) => (mobileScreen ? 'text-3xl' : 'text-7xl')}
   justify-self-center
   font-bold
-`;
-
-export const MenuButton = tw.button`
-  text-gray-400
-  ${({ mobileScreen }) => (mobileScreen ? 'text-3xl' : 'text-6xl')}
 `;
