@@ -14,7 +14,7 @@ export default function TaskList() {
 
   return (
     <div className="border-t border-gray-700 pt-2">
-      { tasks.map(mapTasks) }
+      { (tasks) && tasks.map(mapTasks) }
     </div>
   );
 }

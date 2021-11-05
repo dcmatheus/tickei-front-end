@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 import MoreInfos from './MoreInfos';
 
+const checkboxClass = 'text-xl mr-2';
+
 export default function TaskItem({ task }) {
   const [status, setStatus] = useState('A começar');
   const [moreInfos, setMoreInfos] = useState(false);
@@ -13,19 +15,19 @@ export default function TaskItem({ task }) {
         {
           (status === 'Concluído') ? (
             <ImCheckboxChecked
-              className="text-xl mr-1"
+              className={ checkboxClass }
               onClick={ () => setStatus('Em andamento') }
             />
           ) : (
             <ImCheckboxUnchecked
-              className="text-xl mr-1"
+              className={ checkboxClass }
               onClick={ () => setStatus('Concluído') }
             />
           )
         }
         <button
           type="button"
-          className="text-xl text-left flex-grow "
+          className="text-xl text-left flex-grow"
           onClick={ () => setMoreInfos(!moreInfos) }
         >
           { text }

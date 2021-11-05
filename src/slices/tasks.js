@@ -5,7 +5,7 @@ const initialState = {
   tags: [],
   search: 'additionDate',
   order: 'date',
-  tagSelected: 'Caixa de Entrada',
+  listSelected: 'Caixa de Entrada',
 };
 
 const reducers = {

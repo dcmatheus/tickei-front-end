@@ -6,10 +6,10 @@ import TaskList from './TaskList';
 import AddButton from './AddButton';
 
 export default function CheckList() {
-  const { tagSelected } = useSelector(selectTasks);
+  const { listSelected } = useSelector(selectTasks);
   return (
     <ListTable>
-      <div className="text-center text-3xl mb-3 font-medium">{ tagSelected }</div>
+      <div className="text-center text-3xl mb-3 font-medium">{ listSelected }</div>
       <AddButton />
       <TaskList />
     </ListTable>
