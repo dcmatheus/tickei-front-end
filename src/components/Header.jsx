@@ -1,5 +1,5 @@
 import React from 'react';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import { VscMenu } from 'react-icons/vsc';
 import { BsCheck2Circle } from 'react-icons/bs';
 import {
@@ -8,16 +8,16 @@ import {
 } from '../styles/Components';
 
 export default function Header() {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
+  // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
   return (
-    <StyledHeader mobileScreen={ isTabletOrMobile }>
+    <StyledHeader>
       <VscMenu
         className={ `
           text-gray-400
-          ${isTabletOrMobile ? 'text-3xl' : 'text-7xl'}
+          text-3xl
         ` }
       />
-      <LogoContainer mobileScreen={ isTabletOrMobile }>
+      <LogoContainer>
         <BsCheck2Circle />
         TICKEI
       </LogoContainer>
