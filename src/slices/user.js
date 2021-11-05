@@ -27,4 +27,8 @@ const user = createSlice({
   reducers,
 });
 
-export default user;
+export const select = (state) => state.user;
+
+export const { changeUser, changeUserEmail, changeUserName, logout } = user.actions;
+
+export default user.reducer;

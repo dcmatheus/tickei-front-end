@@ -15,3 +15,15 @@ export const LogoContainer = tw.h1`
   justify-self-center
   font-bold
 `;
+
+export const ListTable = tw.div`
+  bg-gray-800
+  rounded-md
+  text-gray-400
+  m-4
+  flex
+  flex-col
+  align-middle
+  justify-center
+  p-3
+`;
