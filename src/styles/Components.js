@@ -5,14 +5,14 @@ export const StyledHeader = tw.header`
   justify-between
   p-2
   w-full
-  ${({ mobileScreen }) => (mobileScreen ? 'px-2' : 'px-5')}
+  px-2
 `;
 
 export const LogoContainer = tw.h1`
   flex
   content-center
   text-gray-400
-  ${({ mobileScreen }) => (mobileScreen ? 'text-3xl' : 'text-7xl')}
+  text-3xl
   justify-self-center
   font-bold
 `;

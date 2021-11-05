@@ -27,3 +27,13 @@ export const removeTask = async (id) => {
   const tasks = await getAll();
   return tasks;
 };
+
+export const editTask = async (id, task) => {
+  await fetch(`http://localhost:3000/tasks/${id}`, {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify({ ...task }),
+  });
+  const tasks = await getAll();
+  return tasks;
+};
