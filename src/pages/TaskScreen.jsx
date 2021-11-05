@@ -15,7 +15,7 @@ export default function TaskScreen() {
     asyncFunction();
   }, [dispatch]);
   return (
-    <div>
+    <div className="flex flex-col">
       <Header />
       <CheckList />
     </div>

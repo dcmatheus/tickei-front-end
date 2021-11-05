@@ -4,6 +4,7 @@ export const StyledHeader = tw.header`
   flex
   justify-between
   p-2
+  w-full
   ${({ mobileScreen }) => (mobileScreen ? 'px-2' : 'px-5')}
 `;
 
@@ -25,5 +26,8 @@ export const ListTable = tw.div`
   flex-col
   align-middle
   justify-center
-  p-3
+  p-2
+  self-center
+  w-11/12
+  max-w-4xl
 `;

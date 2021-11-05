@@ -5,12 +5,19 @@ const initialState = {
   tags: [],
   search: 'additionDate',
   order: 'date',
+  orientation: 'ascendent',
   listSelected: 'Caixa de Entrada',
 };
 
 const reducers = {
   addTasks(state, { payload }) {
     return { ...state, tasks: payload };
+  },
+  setOrder(state, { payload }) {
+    return { ...state, order: payload };
+  },
+  setOrientation(state, { payload }) {
+    return { ...state, orientation: payload };
   },
 };
 
@@ -22,6 +29,6 @@ const tasks = createSlice({
 
 export const selectTasks = (state) => state.tasks;
 
-export const { addTasks } = tasks.actions;
+export const { addTasks, setOrder, setOrientation } = tasks.actions;
 
 export default tasks.reducer;
