@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../slices/tasks';
+import { addTasks } from '../slices/tasks';
 
 export default function AddButton() {
   const [onForm, changeOnForm] = useState(false);
@@ -14,7 +14,7 @@ export default function AddButton() {
 
   const addNewTask = () => {
     // Adiciona uma nova task
-    dispatch(addTask(text));
+    dispatch(addTasks(text));
     resetState();
   };
 

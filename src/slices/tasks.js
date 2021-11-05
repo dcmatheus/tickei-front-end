@@ -9,8 +9,8 @@ const initialState = {
 };
 
 const reducers = {
-  addTask(state, { payload }) {
-    return { ...state, tasks: [...state.tasks, payload] };
+  addTasks(state, { payload }) {
+    return { ...state, tasks: payload };
   },
 };
 
@@ -22,6 +22,6 @@ const tasks = createSlice({
 
 export const selectTasks = (state) => state.tasks;
 
-export const { addTask } = tasks.actions;
+export const { addTasks } = tasks.actions;
 
 export default tasks.reducer;

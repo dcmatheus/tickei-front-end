@@ -7,7 +7,7 @@ export default function TaskList() {
   const { tasks } = useSelector(selectTasks);
   const mapTasks = (task, index) => (
     <TaskItem
-      task={ { text: task, tag: '', date: '20/10/2013', status: 'Em andamento' } }
+      task={ task }
       key={ index }
     />
   );
