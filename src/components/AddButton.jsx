@@ -19,7 +19,7 @@ export default function AddButton() {
   };
 
   return onForm ? (
-    <form className="bg-gray-700 p-2 rounded-md flex-column text-center">
+    <form className="bg-gray-700 p-2 mb-2 rounded-md flex-column text-center">
       <input
         type="text"
         onChange={ ({ target }) => changeText(target.value) }
@@ -47,7 +47,7 @@ export default function AddButton() {
     <button
       type="button"
       onClick={ () => changeOnForm(true) }
-      className="bg-gray-700 p-2 rounded-md"
+      className="bg-gray-700 p-2 mb-2 rounded-md text-xl"
     >
       + Adicionar task
     </button>
