@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { FaTrashAlt, FaPen } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { addTasks } from '../slices/tasks';
 import { removeTask } from '../services/tasks';
 
 export default function MoreInfos({ task }) {
   const { date, status, list, _id: id } = task;
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="flex justify-between border-gray-600 border-t mt-1 pt-1">
@@ -27,7 +30,7 @@ export default function MoreInfos({ task }) {
         <button
           type="button"
           className="bg-red-900 p-2 rounded-md"
-          onClick={ () => removeTask(id) }
+          onClick={ async () => dispatch(addTasks(await removeTask(id))) }
         >
           <FaTrashAlt />
         </button>

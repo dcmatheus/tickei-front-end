@@ -5,6 +5,7 @@ import TaskItem from './TaskItem';
 
 export default function TaskList() {
   const { tasks } = useSelector(selectTasks);
+
   const mapTasks = (task, index) => (
     <TaskItem
       task={ task }
